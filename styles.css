@@ -1,0 +1,320 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    
+    --color-primary: #1e3a8a;   /* Azul */
+    --color-secondary: #f3f4f6; 
+    --color-tertiary: #e74c3c;  /* Rojo */
+    --color-background: #f5f5f5; /* Gris claro */
+
+    --font-primary: "Inter", sans-serif;
+    --font-secondary: 'Georgia', serif;
+}   
+
+.presentacionLogo{
+    width: 100px;
+    height: 86px;
+    margin: 40px 0 0 40px;
+    box-sizing: border-box;
+}
+
+body {
+        /* Configura el modelo de caja para que el padding y el border se incluyan en el cálculo del ancho y alto del elemento */
+    box-sizing: border-box;
+    background-color: var(--color-background);
+    color: #F6F6F6;
+    max-width: 1440vw; /* Limita el ancho máximo */
+    max-height: 1024vh; /* Limita la altura máxima */
+}
+
+.presentacion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;   
+    justify-content: space-between;
+    align-items: flex-start; /* Alinea los elementos al inicio verticalmente (parte superior) */
+    justify-content: flex-start; /* Alinea los elementos al inicio horizontalmente (parte izquierda) */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--color-primary);
+    background-color: var(--color-background);
+}
+.presentacionInput{
+    width: 60%;
+    width: 680px;
+    height:738px ; 
+    display: flex;
+    flex-direction: column;
+    margin-top: 88px;
+    margin-left: 240px;
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    color:blue;
+    background-color: var(--color-background);
+    overflow: auto; /* Añade scroll si el contenido excede la altura máxima */
+    border: none; /* Elimina el borde del input */
+    box-sizing: border-box;
+    
+}
+.presentacionInput ::placeholder {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 100%;
+    background-color: var(--color-background);
+    border-radius: 4px; /* Opcional: redondea las esquinas del input */
+    box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho */
+    font-size: 1rem; /* Ajusta el tamaño del texto dentro del input */
+    text-align: start;
+  
+}
+
+.presentacionAdvertencia{
+    font-family: var(--font-primary);
+    font-size: 0.5rem;
+    margin-left: 240px;
+    color: gray;
+    box-sizing: border-box;
+}
+
+
+
+.presentacionTexto{
+    height: 781px;
+    width: 336px;
+    box-sizing: border-box;
+}
+
+.presentacionBotones{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    max-width: 680px;
+    height: 67px;
+    gap: 10px; /* Opcional: Espacio entre los botones */
+    margin: 2px 0px 83px 240px;
+    box-sizing: border-box;
+    
+  
+}
+
+.botonEncriptar{
+    width: 40%;
+    background-color:var(--color-primary);
+    font-family: var(--font-primary);
+    color: #F6F6F6;
+    border-radius: 16px;
+    box-sizing: border-box;
+    border: 2px solid var(--color-primary);
+    
+}
+
+.botonDesencriptar{
+    width: 40%;
+    background-color: white;
+    font-family: var(--font-primary);
+    color: var(--color-primary);
+    border-radius: 16px;
+    box-sizing: border-box;
+    border: 2px solid var(--color-primary);
+}
+.presentacionDesencriptado{
+    width:30%;
+    max-width: 400px; /* Limita el ancho máximo */
+    height: auto; /* Ajusta la altura automáticamente */
+    height: 944px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    background-color: white;
+    border-radius: 32px;
+    margin: 0px 40px 0px 40px;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    color: gray;
+}
+.presentacionDesencriptadoTexto{
+    max-width: 336px;
+    height: 781px;
+    background-color: white;
+    margin: 28.05px 32px 28.05px 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-wrap: break-word; /* Asegura que el texto largo se ajuste al contenedor */
+    word-break: break-word; /* Rompe palabras largas si es necesario */
+    overflow: auto;
+
+}
+
+
+
+.botonCopiar{
+background-color: white;
+font-family: var(--font-primary);
+color: darkblue;
+border-radius: 16px;
+border: 2px solid var(--color-primary);
+max-width: 336px;
+height: 67px;
+box-sizing: border-box;
+padding-left: 10px;
+margin-left: 35px;
+
+}
+    
+
+.imgIni{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer{
+    background-color: var(--color-primary);
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    color: white;
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 600px) {
+    .presentacion {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .presentacionInput {
+        width: 90%;
+        max-width: 100%;
+        height: auto;
+        margin: 20px 0;
+        font-size: 1.5rem;
+        margin-left: 0;
+    }
+
+    .presentacionAdvertencia {
+        font-size: 0.4rem;
+        margin-left: 0;
+    }
+
+    .presentacionBotones {
+        width: 90%;
+        margin: 10px 0;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .botonEncriptar,
+    .botonDesencriptar {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .presentacionDesencriptado {
+        width: 90%;
+        max-width: 100%;
+        height: auto;
+        margin: 20px 0;
+    }
+
+    .presentacionDesencriptadoTexto {
+        width: 100%;
+        height: auto;
+        font-size: 1.5rem;
+        margin: 10px 0;
+    }
+
+    .botonCopiar {
+        max-width: 100%;
+        height: auto;
+        font-size: 1rem;
+    }
+}
+
+/* Media Query para tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .presentacion {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .presentacionInput {
+        width: 80%;
+        max-width: 80%;
+        height: auto;
+        font-size: 1.8rem;
+        margin: 20px 0;
+    }
+
+    .presentacionAdvertencia {
+        font-size: 0.5rem;
+        margin-left: 0;
+    }
+
+    .presentacionBotones {
+        width: 80%;
+        margin: 20px 0;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .botonEncriptar,
+    .botonDesencriptar {
+        width: 45%;
+        font-size: 1.2rem;
+    }
+
+    .presentacionDesencriptado {
+        width: 90%;
+        max-width: 100%;
+        height: auto;
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Alinea el contenido verticalmente en el centro */
+    }
+
+    .presentacionDesencriptadoTexto {
+        width: 100%;
+        height: auto;
+        font-size: 1.8rem;
+        margin: 10px 0;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+
+    .botonCopiar {
+        width: 90%;
+        height: auto;
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .imgIni{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+    }
+
+}

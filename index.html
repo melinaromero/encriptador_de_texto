@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="./styles.css">
+     <!-- Agrega el enlace de Font Awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body >
+    <header>
+
+    <img class="presentacionLogo" src="./assets/logo.png.jpeg" >
+    </header>
+    <main>
+        <section class="presentacion">
+        
+            <div>
+                
+                <textarea id= "inputTexto" class="presentacionInput" type="text" placeholder="Introduce el texto"></textarea>
+                 <h1 class="presentacionAdvertencia"> 
+                     <span class="warning-icon"><i class="fas fa-exclamation-circle"></i></span> 
+                     No debe usar mayusculas, letras con acento o caracteres especiales.</h1>
+                 <p class="presentacionBotones">
+                 <button class="botonEncriptar">Encriptar</button>
+                 <button class="botonDesencriptar">Desencriptar</button>
+                 </p>
+            </div>
+            
+            <div class="presentacionDesencriptado">
+            <p id="textRes"class="presentacionDesencriptadoTexto"><img id= "defaultImage"class="imgIni" src="./assets/output.png.jpeg" ></p>
+            <button class="botonCopiar">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Todos los derechos reservados.</p>
+        <p>Desarrollado por Melina Romero</p>
+
+    </footer>
+
+    <!-- Incluye el archivo JavaScript -->
+     <script src="./script.js"></script>
+      
+</body>
+</html>
