@@ -24,7 +24,6 @@
 }
 
 body {
-        /* Configura el modelo de caja para que el padding y el border se incluyan en el cálculo del ancho y alto del elemento */
     box-sizing: border-box;
     background-color: var(--color-background);
     color: #F6F6F6;
@@ -53,12 +52,12 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 88px;
-    margin-left: 240px;
+    margin-left: 140px;
     font-family: var(--font-primary);
     font-size: 2rem;
     color:blue;
     background-color: var(--color-background);
-    overflow: auto; /* Añade scroll si el contenido excede la altura máxima */
+    overflow: auto; /* Añade scroll si el contenido excede la altura maxima */
     border: none; /* Elimina el borde del input */
     box-sizing: border-box;
     
@@ -67,8 +66,8 @@ body {
     width: 100%; /* Ocupa todo el ancho del contenedor */
     height: 100%;
     background-color: var(--color-background);
-    border-radius: 4px; /* Opcional: redondea las esquinas del input */
-    box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho */
+    border-radius: 4px; /*redondea las esquinas del input */
+    box-sizing: border-box; /* Incluye padding y border en el calculo del ancho */
     font-size: 1rem; /* Ajusta el tamaño del texto dentro del input */
     text-align: start;
   
@@ -77,7 +76,7 @@ body {
 .presentacionAdvertencia{
     font-family: var(--font-primary);
     font-size: 0.5rem;
-    margin-left: 240px;
+    margin-left: 140px;
     color: gray;
     box-sizing: border-box;
 }
@@ -96,10 +95,9 @@ body {
     justify-content: flex-start;
     max-width: 680px;
     height: 67px;
-    gap: 10px; /* Opcional: Espacio entre los botones */
-    margin: 2px 0px 83px 240px;
-    box-sizing: border-box;
-    
+    gap: 10px; /* Espacio entre los botones */
+    margin: 2px 0px 83px 140px;
+    box-sizing: border-box;    
   
 }
 
@@ -123,10 +121,11 @@ body {
     box-sizing: border-box;
     border: 2px solid var(--color-primary);
 }
+
 .presentacionDesencriptado{
     width:30%;
-    max-width: 400px; /* Limita el ancho máximo */
-    height: auto; /* Ajusta la altura automáticamente */
+    max-width: 400px; /* Limita el ancho maximo */
+    height: auto; /* Ajusta la altura automaticamente */
     height: 944px;
     display: flex;
     flex-direction: column;
@@ -139,23 +138,20 @@ body {
     font-size: 2rem;
     color: gray;
 }
+
 .presentacionDesencriptadoTexto{
     max-width: 336px;
     height: 781px;
     background-color: white;
-    margin: 28.05px 32px 28.05px 32px;
+    margin: 28.05px 32px 29.05px 32px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow-wrap: break-word; /* Asegura que el texto largo se ajuste al contenedor */
-    word-break: break-word; /* Rompe palabras largas si es necesario */
+    text-align: start;
+    overflow-wrap: break-word; /* para que el texto largo se ajuste al contenedor */
+    word-break: break-word; /* rompe las palabras si son muy largas */
     overflow: auto;
-
 }
-
-
 
 .botonCopiar{
 background-color: white;
@@ -165,19 +161,15 @@ border-radius: 16px;
 border: 2px solid var(--color-primary);
 max-width: 336px;
 height: 67px;
-box-sizing: border-box;
 padding-left: 10px;
 margin-left: 35px;
+box-sizing: border-box;
+}   
 
-}
-    
-
-.imgIni{
-    
+.imgIni{    
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .footer{
@@ -189,7 +181,7 @@ margin-left: 35px;
     color: white;
 }
 
-/* Media Query para dispositivos móviles */
+/* Media query para celulares */
 @media (max-width: 600px) {
     .presentacion {
         flex-direction: column;
@@ -241,13 +233,14 @@ margin-left: 35px;
     }
 
     .botonCopiar {
-        max-width: 100%;
+        max-width: 85%;
         height: auto;
         font-size: 1rem;
+        box-sizing: border-box;
     }
 }
 
-/* Media Query para tablets */
+/* Media query para tablets */
 @media (min-width: 601px) and (max-width: 1024px) {
     .presentacion {
         flex-direction: column;
@@ -289,7 +282,7 @@ margin-left: 35px;
         margin: 20px 0;
         display: flex;
         flex-direction: column;
-        align-items: center; /* Alinea el contenido verticalmente en el centro */
+        align-items: center; /* solucion para alinear el contenido verticalmente en el centro */
     }
 
     .presentacionDesencriptadoTexto {
@@ -308,6 +301,7 @@ margin-left: 35px;
         display: flex;
         justify-content: center;
         align-items: center;
+        box-sizing: border-box;
     }
     
     .imgIni{
